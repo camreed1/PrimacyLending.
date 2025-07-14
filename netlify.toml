@@ -93,6 +93,11 @@ from = "/terms-of-use"
 to = "/terms-of-use.html"
 status = 200
 
+[[redirects]]
+from = "/quiz-thank-you"
+to = "/quiz-thank-you.html"
+status = 200
+
 # Handle SPA routing for any remaining paths (fallback to index.html)
 [[redirects]]
 from = "/*"
