@@ -441,51 +441,6 @@ p {
     margin: 0;
 }
 
-/* New Testimonials Section */
-.testimonials-new {
-    padding: 5rem 0;
-    background: white;
-}
-
-.testimonials-new-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.testimonial-new-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.testimonial-new-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-quote {
-    color: #2563eb;
-    margin-bottom: 1.5rem;
-}
-
-.testimonial-new-text {
-    font-size: 1.125rem;
-    color: #374151;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    font-style: italic;
-}
-
-.testimonial-new-author {
-    font-weight: 600;
-    color: #6b7280;
-    margin: 0;
-}
 
 /* Unsure CTA Section */
 .unsure-cta {

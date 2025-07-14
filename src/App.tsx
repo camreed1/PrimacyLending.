@@ -139,60 +139,6 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white" id="reviews">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-600">Real stories from Alabama homeowners</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Cameron made the refinancing process so easy. We saved $400 a month and got cash out for home improvements. Highly recommend!"
-              </p>
-              <p className="font-semibold text-gray-900">— Sarah M., Huntsville</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Professional, responsive, and honest. Cameron explained everything clearly and got us the best rate possible."
-              </p>
-              <p className="font-semibold text-gray-900">— Mike & Lisa T., Birmingham</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-amber-500 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Fast, efficient, and kept us informed every step of the way. The whole process was stress-free."
-              </p>
-              <p className="font-semibold text-gray-900">— Robert K., Madison</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-6 inline-block">
-              <p className="text-gray-600 font-medium">TrustPilot / Google Reviews Widget</p>
-              <p className="text-sm text-gray-500 mt-1">Integration placeholder</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
