@@ -633,24 +633,16 @@
 
             nextBtn.addEventListener('click', function() {
                 if (currentStep === 6) {
-                    if (leadForm.checkValidity()) {
-                        const formData = new FormData(leadForm);
-                        answers.firstName = formData.get('firstName');
-                        answers.email = formData.get('email');
-                        answers.phone = formData.get('phone');
-                        
-                        showResult();
-                        currentStep = 7;
-                        showStep(currentStep);
-                        
-                        setTimeout(() => {
-                            if (typeof fbq !== 'undefined') {
-                                fbq('trackCustom', 'QuizCompleted');
-                            }
-                        }, 500);
-                    } else {
-                        leadForm.reportValidity();
-                    }
+                    // GHL form handles submission, go directly to results
+                    showResult();
+                    currentStep = 7;
+                    showStep(currentStep);
+                    
+                    setTimeout(() => {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'QuizCompleted');
+                        }
+                    }, 500);
                 } else if (currentStep < 6) {
                     currentStep++;
                     showStep(currentStep);
@@ -669,9 +661,12 @@
                 }
             });
 
-            leadForm.addEventListener('input', function() {
-                nextBtn.disabled = !leadForm.checkValidity();
-            });
+            // Enable next button on step 6 after a short delay to allow form to load
+            setTimeout(() => {
+                if (currentStep === 6) {
+                    nextBtn.disabled = false;
+                }
+            }, 1000);
         }
 
         // Calculate and show result

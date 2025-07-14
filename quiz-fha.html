@@ -478,20 +478,26 @@
                 <!-- Step 6: Lead Capture -->
                 <div class="quiz-step" id="step6">
                     <h2 class="quiz-question">Where should we send your FHA eligibility results?</h2>
-                    <form class="lead-form" id="leadForm">
-                        <div class="form-group">
-                            <label class="form-label" for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="phone">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" name="phone" class="form-input">
-                        </div>
-                    </form>
+                    <div class="ghl-form-container">
+                        <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/YNGrbFbd2ym4j59oIgeY"
+                            style="width:100%;height:469px;border:none;border-radius:20px"
+                            id="inline-YNGrbFbd2ym4j59oIgeY" 
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="FHA Quiz Form"
+                            data-height="469"
+                            data-layout-iframe-id="inline-YNGrbFbd2ym4j59oIgeY"
+                            data-form-id="YNGrbFbd2ym4j59oIgeY"
+                            title="FHA Quiz Form">
+                        </iframe>
+                        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                    </div>
                 </div>
 
                 <!-- Step 7: Results -->
@@ -617,24 +623,16 @@
 
             nextBtn.addEventListener('click', function() {
                 if (currentStep === 6) {
-                    if (leadForm.checkValidity()) {
-                        const formData = new FormData(leadForm);
-                        answers.firstName = formData.get('firstName');
-                        answers.email = formData.get('email');
-                        answers.phone = formData.get('phone');
-                        
-                        showResult();
-                        currentStep = 7;
-                        showStep(currentStep);
-                        
-                        setTimeout(() => {
-                            if (typeof fbq !== 'undefined') {
-                                fbq('trackCustom', 'QuizCompleted');
-                            }
-                        }, 500);
-                    } else {
-                        leadForm.reportValidity();
-                    }
+                    // GHL form handles submission, go directly to results
+                    showResult();
+                    currentStep = 7;
+                    showStep(currentStep);
+                    
+                    setTimeout(() => {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'QuizCompleted');
+                        }
+                    }, 500);
                 } else if (currentStep < 6) {
                     currentStep++;
                     showStep(currentStep);
@@ -653,9 +651,12 @@
                 }
             });
 
-            leadForm.addEventListener('input', function() {
-                nextBtn.disabled = !leadForm.checkValidity();
-            });
+            // Enable next button on step 6 after a short delay to allow form to load
+            setTimeout(() => {
+                if (currentStep === 6) {
+                    nextBtn.disabled = false;
+                }
+            }, 1000);
         }
 
         // Calculate and show result
