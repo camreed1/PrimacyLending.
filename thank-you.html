@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmed - Thank You | Primacy Lending</title>
+    <meta name="description" content="Your appointment has been confirmed. We're looking forward to helping you with your mortgage needs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon-source.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .thank-you-card {
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            padding: 4rem 3rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            position: relative;
+            z-index: 10;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+        
+        .success-icon {
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            opacity: 0;
+            transform: scale(0);
+            animation: bounceIn 0.6s ease-out 0.6s forwards;
+        }
+        
+        .thank-you-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 0.9s forwards;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 1.5rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 1.2s forwards;
+        }
+        
+        .home-button {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 1.5s forwards;
+        }
+        
+        .home-button:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.4);
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f59e0b;
+            animation: confetti-fall 4s ease-out infinite;
+            will-change: transform;
+        }
+        
+        .confetti:nth-child(1) { left: 15%; animation-delay: 0s; background: #ef4444; }
+        .confetti:nth-child(2) { left: 35%; animation-delay: 0.8s; background: #3b82f6; }
+        .confetti:nth-child(3) { left: 55%; animation-delay: 1.6s; background: #10b981; }
+        .confetti:nth-child(4) { left: 75%; animation-delay: 2.4s; background: #f59e0b; }
+        .confetti:nth-child(5) { left: 85%; animation-delay: 3.2s; background: #8b5cf6; }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Optimized animations with will-change */
+        .thank-you-card,
+        .success-icon,
+        .thank-you-title,
+        .thank-you-subtitle,
+        .home-button,
+        .contact-info {
+            will-change: opacity, transform;
+        }
+        
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .thank-you-card,
+            .success-icon,
+            .thank-you-title,
+            .thank-you-subtitle,
+            .home-button,
+            .contact-info {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+            
+            .confetti {
+                display: none;
+            }
+        }
+        
+        /* Simplified fadeInUp animation */
+        @keyframes fadeInUpSimple {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Simplified bounceIn animation */
+        @keyframes bounceInSimple {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Update animation references */
+        .thank-you-card {
+            animation: fadeInUpSimple 0.6s ease-out 0.2s forwards;
+        }
+        
+        .success-icon {
+            animation: bounceInSimple 0.5s ease-out 0.4s forwards;
+        }
+        
+        .thank-you-title {
+            animation: fadeInUpSimple 0.5s ease-out 0.6s forwards;
+        }
+        
+        .thank-you-subtitle {
+            animation: fadeInUpSimple 0.5s ease-out 0.8s forwards;
+        }
+        
+        .home-button {
+            animation: fadeInUpSimple 0.5s ease-out 1.0s forwards;
+        }
+        
+        .contact-info {
+            animation: fadeInUpSimple 0.5s ease-out 1.2s forwards;
+        }
+        
+        .contact-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out 1.8s forwards;
+        }
+        
+        .contact-info p {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .phone-number {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .phone-number:hover {
+            color: #1d4ed8;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-card {
+                padding: 3rem 2rem;
+                margin: 1rem;
+            }
+            
+            .thank-you-title {
+                font-size: 2.5rem;
+            }
+            
+            .thank-you-subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .success-icon {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .thank-you-title {
+                font-size: 2rem;
+            }
+            
+            .thank-you-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti Animation -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <!-- Thank You Container -->
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"/>
+                    <circle cx="12" cy="12" r="10"/>
+                </svg>
+            </div>
+            
+            <h1 class="thank-you-title">Thanks! Your Appointment Is Confirmed ✅</h1>
+            
+            <p class="thank-you-subtitle" id="dynamicMessage">
+                We're looking forward to helping you with your mortgage options.
+            </p>
+            
+            <a href="/" class="home-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                Back to Home
+            </a>
+            
+            <div class="contact-info">
+                <p><strong>Cameron Reed</strong> | NMLS #2613580 | AMIC #38958</p>
+                <p>Questions? Call us at <a href="tel:661-857-2291" class="phone-number">(661) 857-2291</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fire Meta Pixel Schedule event immediately on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fire the Schedule event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Schedule');
+                console.log('✅ Meta Pixel: Schedule event fired on thank you page');
+            } else {
+                console.log('⚠️ Meta Pixel not available - Schedule event not fired');
+            }
+            
+            // Get URL parameters to customize message
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source');
+            
+            if (source) {
+                const messageElement = document.getElementById('dynamicMessage');
+                const loanType = formatLoanType(source);
+                messageElement.textContent = `We're looking forward to helping you with your ${loanType} options.`;
+                console.log(`📝 Dynamic message set for: ${loanType}`);
+            }
+        });
+        
+        // Function to format loan type from URL parameter
+        function formatLoanType(source) {
+            // Handle common source values
+            const loanTypeMap = {
+                'va': 'VA Loan',
+                'fha': 'FHA Loan',
+                'usda': 'USDA Loan',
+                'refi': 'Refinance',
+                'refinance': 'Refinance',
+                'land': 'Land Loan',
+                'land-loans': 'Land Loan',
+                'book-va': 'VA Loan',
+                'book-fha': 'FHA Loan',
+                'book-usda': 'USDA Loan',
+                'book-refinance': 'Refinance',
+                'book-land': 'Land Loan'
+            };
+            
+            // Check if we have a specific mapping
+            if (loanTypeMap[source.toLowerCase()]) {
+                return loanTypeMap[source.toLowerCase()];
+            }
+            
+            // Otherwise, format the source parameter
+            return source
+                .replace(/-/g, ' ')  // Replace dashes with spaces
+                .replace(/\b\w/g, l => l.toUpperCase());  // Capitalize first letter of each word
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+[build]
+publish = "."
+command = ""
+
+# Serve individual HTML files directly
+[[redirects]]
+from = "/refinance"
+to = "/refinance.html"
+status = 200
+
+[[redirects]]
+from = "/fha"
+to = "/fha.html"
+status = 200
+
+[[redirects]]
+from = "/va"
+to = "/va.html"
+status = 200
+
+[[redirects]]
+from = "/usda"
+to = "/usda.html"
+status = 200
+
+[[redirects]]
+from = "/land-loans"
+to = "/land-loans.html"
+status = 200
+
+[[redirects]]
+from = "/quiz-refinance"
+to = "/quiz-refinance.html"
+status = 200
+
+[[redirects]]
+from = "/quiz-va"
+to = "/quiz-va.html"
+status = 200
+
+[[redirects]]
+from = "/quiz-fha"
+to = "/quiz-fha.html"
+status = 200
+
+[[redirects]]
+from = "/quiz-usda"
+to = "/quiz-usda.html"
+status = 200
+
+[[redirects]]
+from = "/quiz-land"
+to = "/quiz-land.html"
+status = 200
+
+[[redirects]]
+from = "/quiz"
+to = "/quiz.html"
+status = 200
+
+[[redirects]]
+from = "/book-va"
+to = "/book-va.html"
+status = 200
+
+[[redirects]]
+from = "/book-fha"
+to = "/book-fha.html"
+status = 200
+
+[[redirects]]
+from = "/book-usda"
+to = "/book-usda.html"
+status = 200
+
+[[redirects]]
+from = "/book-refinance"
+to = "/book-refinance.html"
+status = 200
+
+[[redirects]]
+from = "/book-land"
+to = "/book-land.html"
+status = 200
+
+[[redirects]]
+from = "/privacy-policy"
+to = "/privacy-policy.html"
+status = 200
+
+[[redirects]]
+from = "/terms-of-use"
+to = "/terms-of-use.html"
+status = 200
+
+# Handle SPA routing for any remaining paths (fallback to index.html)
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 404
