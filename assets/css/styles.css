@@ -199,10 +199,7 @@ p {
 /* New Hero Section */
 .hero-new {
     padding: 6rem 0 4rem;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('zero-take-WvHrrR1C5Po-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     text-align: center;
 }
 
