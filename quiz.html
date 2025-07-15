@@ -727,17 +727,21 @@
                     // Store answer
                     answers[stepId] = this.dataset.value;
                     
-                    // Enable next button
-                    nextBtn.disabled = false;
+                    // Auto-advance to next step after a short delay
+                    if (currentStep < 6) {
+                        setTimeout(() => {
+                            currentStep++;
+                            showStep(currentStep);
+                        }, 300);
+                    } else if (currentStep === 6) {
+                        nextBtn.disabled = false;
+                    }
                 });
             });
 
             // Navigation buttons
             nextBtn.addEventListener('click', function() {
                 if (currentStep < 6) {
-                    currentStep++;
-                    showStep(currentStep);
-                    nextBtn.disabled = true;
                 } else if (currentStep === 6) {
                     // Go directly to results after step 6
                     showResult();

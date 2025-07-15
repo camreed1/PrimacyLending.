@@ -617,7 +617,16 @@
                     
                     this.classList.add('selected');
                     answers[stepId] = this.dataset.value;
-                    nextBtn.disabled = false;
+                    
+                    // Auto-advance to next step after a short delay
+                    if (currentStep < 6) {
+                        setTimeout(() => {
+                            currentStep++;
+                            showStep(currentStep);
+                        }, 300);
+                    } else if (currentStep === 6) {
+                        nextBtn.disabled = false;
+                    }
                 });
             });
 
@@ -633,10 +642,6 @@
                             fbq('trackCustom', 'QuizCompleted');
                         }
                     }, 500);
-                } else if (currentStep < 6) {
-                    currentStep++;
-                    showStep(currentStep);
-                    nextBtn.disabled = true;
                 }
             });
 
