@@ -339,7 +339,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Fire the Schedule event
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'Schedule');
+                fbq('track', 'Schedule', {}, {eventID: '705072589038687'});
                 console.log('✅ Meta Pixel: Schedule event fired on thank you page');
             } else {
                 console.log('⚠️ Meta Pixel not available - Schedule event not fired');

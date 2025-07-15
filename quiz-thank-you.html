@@ -480,7 +480,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Fire Meta Pixel Lead event immediately on page load
             if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
+                fbq('track', 'Lead', {}, {eventID: '705072589038687'});
                 console.log('✅ Meta Pixel: Lead event fired on quiz thank you page');
             } else {
                 console.log('⚠️ Meta Pixel not available - Lead event not fired');
