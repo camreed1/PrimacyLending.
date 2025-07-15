@@ -199,7 +199,7 @@ p {
 /* New Hero Section */
 .hero-new {
     padding: 6rem 0 4rem;
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
     text-align: center;
 }
 
@@ -218,7 +218,7 @@ p {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #60a5fa, #fbbf24);
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
