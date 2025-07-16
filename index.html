@@ -190,7 +190,7 @@
                     </div>
                 </a>
                 
-                <a href="#quiz" class="loan-option-card first-time-card">
+                <a href="first-time-buyer-quiz.html" class="loan-option-card first-time-card">
                     <div class="loan-option-icon first-time-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
@@ -398,13 +398,6 @@
         // Quiz button placeholder functionality
         document.querySelector('.quiz-btn').addEventListener('click', function() {
             window.location.href = 'quiz.html';
-        });
-        
-        // Fire Meta Pixel pageview event on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'PageView', {}, {eventID: '725498643596908'});
-            }
         });
     </script>
 </body>
