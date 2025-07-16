@@ -69,10 +69,251 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-new">
+    <section class="hero">
         <div class="container">
-            <div class="hero-new-content">
-                <h1 class="hero-new-title">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Unlock the Power of Your
+                        <span class="gradient-text">Home Equity</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Free home equity review — no obligation, no credit pull. 
+                        Discover how much you could save or access today.
+                    </p>
+                    <button class="btn btn-primary btn-large">
+                        Book Your Call
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="hero-form">
+                    <h3 class="form-title">Schedule Your Free Consultation</h3>
+                    <!-- GHL Calendar Widget -->
+                    <div class="ghl-calendar-widget" id="home-calendar">
+                        <div class="ghl-calendar-placeholder">
+                            <div class="placeholder-content">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                <div class="placeholder-title">GoHighLevel Calendar Widget</div>
+                                <div class="placeholder-subtitle">Integration placeholder - embed calendar here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What are you looking to do Section -->
+    <section class="loan-selector" id="loan-selector">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What are you looking to do?</h2>
+                <p class="section-subtitle">Choose your path to homeownership or savings</p>
+            </div>
+            
+            <div class="loan-options-grid">
+                <a href="refinance.html" class="loan-option-card">
+                    <div class="loan-option-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="m2 17 10 5 10-5"/>
+                            <path d="m2 12 10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">Refinance My Home</h3>
+                    <p class="loan-option-description">Lower your rate, reduce payments, or access cash</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <a href="va.html" class="loan-option-card">
+                    <div class="loan-option-icon va-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="3,11 22,2 13,21 11,13 3,11"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">Get a VA Loan</h3>
+                    <p class="loan-option-description">0% down for veterans and service members</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <a href="fha.html" class="loan-option-card">
+                    <div class="loan-option-icon fha-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">Qualify for an FHA Loan</h3>
+                    <p class="loan-option-description">Low down payment with flexible credit</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <a href="usda.html" class="loan-option-card">
+                    <div class="loan-option-icon usda-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="m2 17 10 5 10-5"/>
+                            <path d="m2 12 10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">Use a USDA Loan</h3>
+                    <p class="loan-option-description">0% down for rural and suburban areas</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <a href="land-loans.html" class="loan-option-card">
+                    <div class="loan-option-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">Finance Land Purchase</h3>
+                    <p class="loan-option-description">Raw land, recreational property, or future development</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+                
+                <a href="#quiz" class="loan-option-card first-time-card">
+                    <div class="loan-option-icon first-time-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m19 8 2 2-2 2"/>
+                            <path d="m21 10-7.5 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="loan-option-title">I'm a First-Time Buyer</h3>
+                    <p class="loan-option-description">Find the best program for your situation</p>
+                    <div class="loan-option-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12,5 19,12 12,19"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Primacy Lending -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Homeowners Trust Primacy Lending</h2>
+            </div>
+            
+            <div class="why-choose-content">
+                <div class="why-choose-grid">
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                                <path d="M3 12h6m6 0h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Licensed, Local Expertise</h3>
+                        <p class="why-choose-description">NMLS #2613580 with deep market knowledge and experience</p>
+                    </div>
+                    
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M9 14a6 6 0 0 0-6 6v1h12v-1a6 6 0 0 0-6-6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Personalized Guidance</h3>
+                        <p class="why-choose-description">Not pushy sales — just honest, helpful advice</p>
+                    </div>
+                    
+                    <div class="why-choose-item">
+                        <div class="why-choose-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Fast, Clear Answers</h3>
+                        <p class="why-choose-description">No obligation consultations with quick responses</p>
+                    </div>
+                </div>
+                
+                <div class="personal-quote">
+                    <div class="quote-content">
+                        <p class="quote-text">
+                            "I created Primacy Lending to help people confidently navigate the lending process. From start to finish, our clients can expect complete transparency and our absolute dedication to helping you feel comfortable with the process of buying or refinancing your property."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 2rem; margin-top: 2rem; justify-content: center;">
+                            <img src="assets/IMG_1132.JPG" alt="Cameron Reed, Loan Officer" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #2563eb;">
+                            <div>
+                                <h4 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">Cameron Reed</h4>
+                                <p style="color: #6b7280; margin: 0; font-weight: 500;">Licensed Loan Officer, NMLS #2613580</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Unsure CTA Section -->
+    <section class="unsure-cta" id="quiz">
+        <div class="container">
+            <div class="unsure-cta-content">
+                <h2 class="unsure-cta-title">Not sure which loan is right for you?</h2>
+                <p class="unsure-cta-subtitle">
+                    Take our quick assessment to find your best mortgage option
+                </p>
+                <button class="btn btn-secondary btn-large quiz-btn">
+                    Take the 30-Second Loan Match Quiz
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <circle cx="12" cy="12" r="10"/>
+                    </svg>
+                </button>
+                <p class="quiz-note">Get personalized loan recommendations in 30 seconds</p>
+            </div>
+        </div>
+    </section></parameter>
                     Smarter Home Financing
                     <span class="gradient-text">Starts Here</span>
                 </h1>
