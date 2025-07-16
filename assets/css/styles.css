@@ -149,7 +149,7 @@ p {
 
 .nav {
     display: flex;
-    gap: 1rem;
+    gap: .75rem;
     flex-wrap: nowrap;
 }
 
