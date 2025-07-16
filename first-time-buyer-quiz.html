@@ -579,10 +579,10 @@
                 <!-- Step 7: GHL Form -->
          <div class="quiz-step" id="step7">
                     <h2 class="quiz-question">Where should we send your first time buyer's analysis?</h2>
-                    <div class="ghl-form-container">
+                    <div class="ghl-form-container" style="min-height: 500px; height: 500px; padding: 0;">
                         <iframe
     src="https://api.leadconnectorhq.com/widget/form/3VSLunpTV4WMDYikcPrH"
-    style="width:100%;height:100%;border:none;border-radius:20px"
+    style="width:100%;height:100%;border:none;border-radius:12px"
     id="inline-3VSLunpTV4WMDYikcPrH" 
     data-layout="{'id':'INLINE'}"
     data-trigger-type="alwaysShow"
@@ -591,11 +591,11 @@
     data-activation-value=""
     data-deactivation-type="neverDeactivate"
     data-deactivation-value=""
-    data-form-name="First Time Homebuyer Quiz Form"
-    data-height="undefined"
+    data-form-name="First-Time Homebuyer Quiz Form"
+    data-height="500"
     data-layout-iframe-id="inline-3VSLunpTV4WMDYikcPrH"
     data-form-id="3VSLunpTV4WMDYikcPrH"
-    title="First Time Homebuyer Quiz Form"
+    title="First-Time Homebuyer Quiz Form"
         >
 </iframe>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
@@ -603,7 +603,7 @@
                 </div>
 
                 <!-- Navigation -->
-                <div class="quiz-navigation">
+                <div class="quiz-navigation" id="quizNavigation">
                     <button class="btn-quiz btn-quiz-secondary" id="backBtn" style="display: none;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="19" y1="12" x2="5" y2="12"/>
@@ -703,6 +703,16 @@
                 });
             });
 
+            // Add event listener for form submission
+            window.addEventListener('message', function(event) {
+                if (event.data.type === 'hsFormSubmit') {
+                    // Redirect to thank you page after form submission
+                    setTimeout(() => {
+                        window.location.href = 'first-time-buyer-thank-you.html';
+                    }, 1000);
+                }
+            });
+
             backBtn.addEventListener('click', function() {
                 if (currentStep > 1) {
                     currentStep--;
@@ -714,7 +724,7 @@
                 }
             });
         }
-
+        
         document.addEventListener('DOMContentLoaded', initQuiz);
     </script>
 </body>
