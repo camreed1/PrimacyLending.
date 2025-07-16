@@ -149,8 +149,10 @@ p {
 
 .nav {
     display: flex;
-    gap: .75rem;
+    justify-content: space-around;
     flex-wrap: nowrap;
+    flex-grow: 1;
+    margin: 0 2rem;
 }
 
 .nav-link {
