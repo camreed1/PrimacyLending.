@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary btn-large">
-                        <a href="first-time-buyer-quiz.html" style="color: inherit; text-decoration: none;">Take the Quiz</a>
+                        Take the Quiz
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"/>
                             <polyline points="12,5 19,12 12,19"/>
@@ -494,5 +494,16 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Add click handler for hero CTA button
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroButton = document.querySelector('.hero .btn-primary');
+            if (heroButton) {
+                heroButton.addEventListener('click', function() {
+                    window.location.href = 'first-time-buyer-quiz.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
