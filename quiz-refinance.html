@@ -615,6 +615,21 @@
         function initQuiz() {
             updateProgress();
             attachEventListeners();
+            
+            // Add event listener for first interaction to track quiz start
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.addEventListener('click', function onFirstClick() {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('trackCustom', 'QuizStart', {quizType: 'refinance'}, {eventID: '725498643596908'});
+                        console.log('✅ QuizStart event fired - Refinance Quiz');
+                    }
+                    
+                    // Remove this event listener after first click
+                    document.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.removeEventListener('click', onFirstClick);
+                    });
+                });
+            });
         }
 
         // Update progress bar and counter
