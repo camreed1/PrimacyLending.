@@ -701,10 +701,7 @@
                     this.classList.add('selected');
                     answers[stepId] = this.dataset.value;
                     
-                    // Fire QuizStart event on first answer
-                    if (currentStep === 1 && typeof fbq !== 'undefined') {
-                        fbq('trackCustom', 'QuizStart', {}, {eventID: '725498643596908'});
-                    }
+
                     
                     // Auto-advance to next step after a short delay
                     if (currentStep < 7) {
